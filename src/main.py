@@ -3,6 +3,8 @@ import sys
 
 from const import *
 from game import Game
+
+
 class Main:
     def __init__(self):
         pygame.init()
@@ -14,6 +16,7 @@ class Main:
 
         while True:
             self.game.show_background(self.screen)
+            self.game.show_pieces(self.screen)
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -21,7 +24,6 @@ class Main:
                     sys.exit()
 
             pygame.display.update()
-
 
 
 main = Main()

@@ -1,6 +1,6 @@
 # Screen dimensions in px
-WIDTH = 500
-HEIGHT = 500
+WIDTH = 650
+HEIGHT = 650
 
 # Board dimensions
 COLS = 8

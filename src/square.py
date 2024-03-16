@@ -1,4 +1,3 @@
-
 class Square:
 
     def __init__(self, row, col, piece=None):
@@ -6,3 +5,8 @@ class Square:
         self.col = col
         self.piece = piece
 
+    def has_piece(self):
+
+        if self.piece is not None:
+            return True
+        return False
