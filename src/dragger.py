@@ -14,7 +14,7 @@ class Dragger:
 
     def update_blit(self, surface):
 
-        self.piece.set_texture(size=128)
+        self.piece.set_texture()
         texture = self.piece.texture
 
         img = pygame.image.load(texture)

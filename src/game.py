@@ -2,10 +2,12 @@ import pygame
 
 from const import *
 from board import *
+from dragger import *
 class Game:
 
     def __init__(self):
         self.board = Board()
+        self.dragger = Dragger()
 
 
     ################
@@ -30,11 +32,11 @@ class Game:
                 if self.board.squares[row][col].has_piece():
 
                     piece = self.board.squares[row][col].piece
-
-                    img = pygame.image.load(piece.texture)
-                    img_center = col * SQUARESIZE + SQUARESIZE // 2, row * SQUARESIZE + SQUARESIZE // 2
-                    piece.text_rect = img.get_rect(center = img_center)
-                    surface.blit(img, piece.text_rect)
+                    if piece is not self.dragger.piece:
+                      img = pygame.image.load(piece.texture)
+                      img_center = col * SQUARESIZE + SQUARESIZE // 2, row * SQUARESIZE + SQUARESIZE // 2
+                      piece.text_rect = img.get_rect(center = img_center)
+                      surface.blit(img, piece.text_rect)
 
 
 
